@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Users</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .list-group-item {
+            position: relative;
+            display: block;
+            padding: 10px 15px;
+            margin-bottom: -1px;
+            background-color: #fff;
+            font: 15px arial, sans-serif;
+            font-weight: bold;
+            border: 1px solid #cca447;
+            box-shadow: #cca447;
+        }
+
+        a.list-group-item:focus,
+        a.list-group-item:hover{
+            color: #fff;
+            text-decoration: none;
+            font: 18px arial, sans-serif;
+            background-color: #cca447;
+        }
+    </style>
+</head>
+<body style="font-family: Georgia" >
+
+    <header  class="allSides">
+        <p  class="title-style text-center">Demo App</p>
+    </header>
+    <div class="container" style="margin-top: 30px">
+        <div class="panel "><div class="panel-header" style="padding: 3px;font-size: 20px" ><strong>Active Users</strong></div></div>
+        <div class="list-group">
+            <% for (i=0;i<users.length;i++){%>
+            <div><a  href="/userinfo/<%= users[i]._id%>" class="list-group-item"><%= users[i].firstname+" "+users[i].lastname%></a></div>
+
+            <%}%>
+        </div>
+    </div>
+
+    <footer class="footer allSides" style="bottom: 0;position: fixed" >
+        <center><strong>Developed by Pavneet Kaur</strong>
+        </center>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+</html>

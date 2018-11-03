@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Users</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .card-pricing.popular {
+            z-index: 1;
+            border: 3px solid #cca447;
+
+            border-radius: 3px;
+            box-shadow: inset 0 -5px 45px #cca447, 0 1px 1px rgba(255,255,255,0.2);
+            -webkit-transition: box-shadow .5s ease;
+            -moz-transition: box-shadow .5s ease;
+            -o-transition: box-shadow .5s ease;
+            -ms-transition: box-shadow .5s ease;
+            transition: box-shadow .5s ease;
+        }
+        .card-pricing .list-unstyled li {
+            padding: .5rem 0;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body style="font-family: Georgia" >
+
+    <header  class="allSides">
+        <p  class="title-style text-center">Demo App</p>
+    </header>
+
+    <div class="panel container" style="margin-top: 20px"><div class="panel-header" style="padding: 3px;font-size: 20px;" ><strong>More Information about
+                <strong style="color: #0089d1"><%= user.firstname+" "+user.lastname%></strong></strong></div></div>
+        <div class="content card card-pricing popular shadow text-center ">
+                <center>
+                    <div class="panel panel-warning panel_style" style="margin-top: 30px;" >
+                        <div class="panel-heading"  style="font:14px Georgia ;"><strong>Email:</strong></div>
+                        <div class="panel-body panel_body_style" style=";color: #0089d1"><b><%= user.email%></b></div>
+                    </div>
+                    <% if(user.phone!=""){%>
+                    <div class="panel panel-warning panel_style"  >
+                        <div class="panel-heading"  style="font:14px Georgia ;"><strong>Phone:</strong></div>
+                        <div class="panel-body panel_body_style" style=";color: #0089d1"><b><%= user.phone%></b></div>
+                    </div>
+                    <%}%>
+                    <% if(user.company!=""){%>
+                    <div class="panel panel-warning panel_style"  >
+                        <div class="panel-heading"  style="font:14px Georgia ;"><strong>Company:</strong></div>
+                        <div class="panel-body panel_body_style" style=";color: #0089d1"><b><%= user.company%></b></div>
+                    </div>
+                    <%}%>
+                </center>
+        </div>
+
+    <footer class="footer allSides"  style="margin-top:16%">
+        <center><strong>Developed by Pavneet Kaur</strong>
+        </center>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+</html>
