@@ -24,7 +24,7 @@ router.post('/',function (req,res) {
     if (firstname == "" && lastname == "" && email == "") {
         res.render('index', {title: 'Sign Up', error: 'No field can be empty!'});
     }else{
-        if (!isNaN(phone) && phone.length==10){
+        if ((!isNaN(phone) && phone.length==10) || phone==''){
             controllers.usercontroller.createUser(req.body, (error, response) => {
                 if(error)
                     res.render('index', {title: 'Sign Up', error: error});
